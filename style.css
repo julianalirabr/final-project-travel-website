@@ -1,0 +1,312 @@
+body {
+  background: rgb(237, 246, 249);
+  font-size: 10px;
+  font-family: "Cabin", sans-serif;
+}
+
+.travel-header {
+  background: rgb(131, 197, 190);
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.travel-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  color: rgb(237, 246, 249);
+  font-size: 12px;
+}
+
+.travel-nav-element {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .travel-nav-element {
+    display: none;
+  }
+}
+
+.nav-item-highlight {
+  border-bottom: 6px solid rgb(131, 197, 190);
+  transition: 0.2s ease-in-out;
+}
+
+.nav-item-highlight:hover {
+  border-bottom: 6px solid rgb(0, 109, 119); /*this highlight will only be visible when the mouse cursor hovers over it*/
+}
+.hamburger-menu-container {
+  /*img parent, which is a div*/
+  display: none;
+  align-items: center;
+  margin-right: 10px;
+}
+@media (max-width: 480px) {
+  .hamburger-menu-container {
+    display: flex;
+  }
+}
+.hamburger-menu {
+  /*img*/
+  width: 20px;
+  height: 20px;
+  border-radius: 0; /*the border-radius is 0 because it overrides the img selector */
+  cursor: pointer;
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(110deg)
+    brightness(102%) contrast(101%); /*hamburger menu white instead of black to match with my palette of colours. I found this solution here: https://stackoverflow.com/a/53336754 */
+}
+
+.principal-travel-images {
+  text-align: center;
+  font-size: 20px;
+  color: #006d77;
+}
+
+.buy-now-alert {
+  color: #ff686b;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: left;
+  font-size: 16px;
+}
+@media (min-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.item {
+  cursor: pointer;
+}
+
+.item h2 {
+  margin-bottom: 2px;
+}
+.item h3 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.item h4 {
+  font-size: 22px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+.item p {
+  margin-bottom: 2px;
+}
+img {
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.selected-travel {
+  display: block; /*this is my second page on the website.*/
+}
+.selected-travel-details {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .selected-travel-details {
+    flex-direction: row;
+  }
+}
+@media (max-width: 768px) {
+  .selected-travel-details {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.selected-travel-image-container {
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  .selected-travel-image-container {
+    margin-right: 0;
+  }
+}
+.selected-travel-image {
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .selected-travel-image {
+    max-height: 200px;
+  }
+}
+.selected-travel-info {
+  max-width: 400px;
+  font-size: 14px;
+  color: rgb(0, 109, 119);
+  text-align: justify;
+}
+.selected-travel-title {
+  text-align: center;
+  font-size: 28px;
+  color: rgb(0, 109, 119);
+  font-weight: bold;
+}
+.selected-travel-price {
+  font-size: 32px;
+}
+.selected-travel-button-container {
+  display: flex;
+  justify-content: center;
+}
+button {
+  border: 3px;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button-go-back {
+  background-color: #ff686b;
+}
+.button-success {
+  background-color: #006d77;
+  color: white;
+}
+.button-modal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 15px 64px;
+}
+.modal-window {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+}
+.modal-message {
+  background: #83c5be;
+  border: 15px solid white;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 60px;
+  max-width: 500px;
+}
+.footer {
+  background: #83c5be;
+  margin-top: 50px;
+  padding: 20px 20px 5px 20px;
+  color: white;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  font-size: 12px;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .footer-links {
+    flex-direction: column;
+  }
+}
+.footer p {
+  font-size: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+/*hamburguer style inside (when clicked)*/
+.side-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px 25px 25px;
+}
+.logo-side-menu {
+  width: 200px;
+  height: 70px;
+  object-fit: cover;
+  margin-left: -10px;
+}
+
+.side-menu-position {
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2; /* brings the side menu to the top of the other pages */
+}
+.side-menu-design {
+  background: rgb(131, 197, 190);
+  opacity: 0;
+  transform: translateX(
+    100%
+  ); /* hides the side menu to the right of the page, out of view from the user  */
+  transition: 0.4s ease-in-out;
+}
+.side-menu-content {
+  color: white;
+  font-size: 24px;
+  margin: 25px;
+  padding-left: 0;
+}
+
+.side-menu-content li {
+  list-style: none;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.show-menu {
+  opacity: 1;
+  transform: translateX(
+    0%
+  ); /* brings the side menu back to the original position */
+}
+.close-button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
